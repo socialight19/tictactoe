@@ -1,0 +1,108 @@
+section {
+   border-bottom: 1px dashed black;
+   padding: 10px;
+}
+
+#gameboard {
+  margin: 0 auto;
+}
+
+
+
+.main {
+  margin: 0 auto;
+   height: 750px;
+   background-color: black;
+}
+
+.red-text {
+   color: red;
+}
+
+.red-bg {
+   background: red;
+   color: white;
+}
+
+.blue-bg {
+   background: blue;
+   color: white;
+}
+
+.green-bg {
+   background: green;
+   color: white;
+}
+
+ul {
+   list-style-type: none;
+}
+
+li {
+   margin: 15px;
+}
+
+.contact-info {
+   margin: 0;
+}
+
+#winnerletters {
+  position: absolute;
+  font-family: helvetica-neue;
+  color: white;
+  font-size: 200px;
+  margin-top: 200px;
+  -ms-transform: rotate(-17deg); /* IE 9 */
+  -webkit-transform: rotate(-17deg); /* Chrome, Safari, Opera */
+    transform: rotate(-17deg);
+
+}
+
+.square {
+   width: 200px;
+   height: 200px;
+   background-image: url("../images/squarenoborder.png");
+   background-size: 100%;
+   /*100% size to fit its container*/
+
+   display: inline-block;
+}
+
+.circle {
+   width: 200px;
+   height: 200px;
+   background-image: url("../images/circleshadow.png");
+   background-size: 100%;
+   /*100% size to fit its container*/
+
+   display: inline-block;
+}
+
+.square > div {
+    width: 200px;
+   height: 200px;
+/*   background-color: red;
+*/}
+
+
+.ex {
+   width: 200px;
+   height: 200px;
+   background-image: url("../images/xwhiteshadow.png");
+   background-size: 100%;
+   /*100% size to fit its container*/
+
+   display: inline-block;
+}
+
+#gameboard {
+   width: 600px;
+}
+
+
+.win1 {
+  position: absolute;
+    background-image: url('http://i395.photobucket.com/albums/pp35/showmyface/7days7ans/day6/funny-monkey-78.jpg');
+    z-index: 2;
+    color: red;
+}
