@@ -1,18 +1,79 @@
+body {
+     background-color: black;
+
+}
+#overall {
+  margin: 0 auto;
+  text-align: center;
+  margin-left: -35px;
+}
 section {
    border-bottom: 1px dashed black;
    padding: 10px;
 }
 
+#player1board > img {
+  margin-top: 20px;
+  width: 50px;
+  padding-right: 12px;
+}
+
+#player2board > div {
+   margin-left: 50px;
+}
+
+#player2board > div > img {
+  float: left;
+  margin-top: 5px;
+  width: 70px;
+}
+
+/*main
+gameboard
+centertable
+circlewinsright*/
+
 #gameboard {
   margin: 0 auto;
+  display: inline-block;
+  width: 100%;
+}
+
+#centertable {
+  width: 600px;
+  display: inline-block;
 }
 
 
-
 .main {
+  width: 1200px;
   margin: 0 auto;
-   height: 750px;
-   background-color: black;
+   height: 100%;
+   display: inline-block;
+}
+
+#winsleft {
+  display: inline-block;
+  width: 300px;
+  height: 600px;
+  float: left;
+
+
+}
+
+.player {
+  margin-top: 150px;
+  font-size: 50px;
+  color: white;
+}
+
+#winsright {
+  display: inline-block;
+  width: 300px;
+  height: 600px;
+
+  float: right;
+
 }
 
 .red-text {
@@ -47,6 +108,7 @@ li {
 }
 
 #winnerletters {
+  z-index: 2;
   position: absolute;
   font-family: helvetica-neue;
   color: white;
@@ -54,12 +116,14 @@ li {
   margin-top: 200px;
   -ms-transform: rotate(-17deg); /* IE 9 */
   -webkit-transform: rotate(-17deg); /* Chrome, Safari, Opera */
-    transform: rotate(-17deg);
+  transform: rotate(-17deg);
+  text-shadow: -1px 0 #7e7878, 0 3px #7e7878, 3px 0 #7e7878, 0 -1px #7e7878;
 
 }
 
 .square {
    width: 200px;
+   z-index: 0;
    height: 200px;
    background-image: url("../images/squarenoborder.png");
    background-size: 100%;
@@ -71,6 +135,7 @@ li {
 .circle {
    width: 200px;
    height: 200px;
+   z-index: 0;
    background-image: url("../images/circleshadow.png");
    background-size: 100%;
    /*100% size to fit its container*/
@@ -88,6 +153,7 @@ li {
 .ex {
    width: 200px;
    height: 200px;
+   z-index: 0;
    background-image: url("../images/xwhiteshadow.png");
    background-size: 100%;
    /*100% size to fit its container*/
@@ -102,7 +168,89 @@ li {
 
 .win1 {
   position: absolute;
-    background-image: url('http://i395.photobucket.com/albums/pp35/showmyface/7days7ans/day6/funny-monkey-78.jpg');
-    z-index: 2;
+    z-index: 1;
+    margin-top: 7px;
     color: red;
+    max-width: 600px;
 }
+
+.win2 {
+  position: absolute;
+    z-index: 0;
+    margin-top: 220px;
+    color: red;
+    max-width: 600px;
+}
+
+.win3 {
+  position: absolute;
+    z-index: 0;
+    margin-top: 420px;
+    color: red;
+    max-width: 600px;
+}
+
+.win4 {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    position: absolute;
+    z-index: 1;
+    margin-top: 10px;
+    margin-left: -420px; 
+    color: red;
+    max-width: 600px;
+}
+
+.win5 {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    position: absolute;
+    z-index: 1;
+    margin-top: 10px;
+    margin-left: -230px; 
+    color: red;
+    max-width: 600px;
+}
+
+.win6 {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    position: absolute;
+    z-index: 1;
+    margin-top: 10px;
+    margin-left: -30px; 
+    color: red;
+    max-width: 600px;
+}
+
+
+.win7 {
+    -ms-transform: rotate(135deg); /* IE 9 */
+    -webkit-transform: rotate(135deg); /* Chrome, Safari, Opera */
+    transform: rotate(135deg);
+    position: absolute;
+    z-index: 1;
+    margin-top: -235px;
+    margin-left: -235px; 
+    color: red;
+    max-width: 700px;
+}
+
+.win8 {
+    -ms-transform: rotate(225deg); /* IE 9 */
+    -webkit-transform: rotate(225deg); /* Chrome, Safari, Opera */
+    transform: rotate(225deg);
+    position: absolute;
+    z-index: 1;
+    margin-top: -235px;
+    margin-left: 135px; 
+    color: red;
+    max-width: 700px;
+}
+
+
+
+

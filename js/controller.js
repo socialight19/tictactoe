@@ -22,8 +22,15 @@ function MainController() {
        {circle: false, x: false}
    ]; 
 
+   self.wins = [
+       {circle: true, x: false},
+       {circle: true, x: false},
+       {circle: false, x: false}
+   ]; 
+
    self.win = false;
    self.classy = "win1";
+   self.winUrl = "";
 
 
    var count = 0;
@@ -55,40 +62,109 @@ function MainController() {
 				if ( (self.squaresList[0].x == true) && (self.squaresList[1].x == true) && (self.squaresList[2].x == true) ) {
 						self.win = ('true');
 						self.winningLine = "win1";
+						
 					}
 
 				else if ( (self.squaresList[3].x == true) && (self.squaresList[4].x == true) && (self.squaresList[5].x == true) ) {
 						self.win = ('true');
+						self.winningLine = "win2";
+						
 					}
 
 				else if ( (self.squaresList[6].x == true) && (self.squaresList[7].x == true) && (self.squaresList[8].x == true) ) {
 						self.win = ('true');
+						self.winningLine = "win3";
+						
 					}
 
 				// vertical wins
 
 				else if ( (self.squaresList[0].x == true) && (self.squaresList[3].x == true) && (self.squaresList[6].x == true) ) {
 						self.win = ('true');
+						self.winningLine = "win4";
+						
 					}
 
 				else if ( (self.squaresList[1].x == true) && (self.squaresList[4].x == true) && (self.squaresList[7].x == true) ) {
 						self.win = ('true');
+						self.winningLine = "win5";
+						
 					}
 
 				else if ( (self.squaresList[2].x == true) && (self.squaresList[5].x == true) && (self.squaresList[8].x == true) ) {
 						self.win = ('true');
+						self.winningLine = "win6";
+						
 					}
 
 				// diagonal wins
 
 				else if ( (self.squaresList[2].x == true) && (self.squaresList[4].x == true) && (self.squaresList[6].x == true) ) {
 					self.win = ('true');
+					self.winningLine = "win7";
+					
 				}
 
 				else if ( (self.squaresList[0].x == true) && (self.squaresList[4].x == true) && (self.squaresList[8].x == true) ) {
 					self.win = ('true');
+					self.winningLine = "win8";
+					
 				}
 
+
+				// circle wins
+
+				else if ( (self.squaresList[0].circlecircle == true) && (self.squaresList[1].circlecircle == true) && (self.squaresList[2].circlecircle == true) ) {
+						self.win = ('true');
+						self.winningLine = "win1";
+						
+					}
+
+				else if ( (self.squaresList[3].circlecircle == true) && (self.squaresList[4].circlecircle == true) && (self.squaresList[5].circlecircle == true) ) {
+						self.win = ('true');
+						self.winningLine = "win2";
+						
+					}
+
+				else if ( (self.squaresList[6].circle == true) && (self.squaresList[7].circle == true) && (self.squaresList[8].circle == true) ) {
+						self.win = ('true');
+						self.winningLine = "win3";
+						
+					}
+
+				// vertical wins
+
+				else if ( (self.squaresList[0].circle == true) && (self.squaresList[3].circle == true) && (self.squaresList[6].circle == true) ) {
+						self.win = ('true');
+						self.winningLine = "win4";
+					
+					}
+
+				else if ( (self.squaresList[1].circle == true) && (self.squaresList[4].circle == true) && (self.squaresList[7].circle == true) ) {
+						self.win = ('true');
+						self.winningLine = "win5";
+						
+					}
+
+				else if ( (self.squaresList[2].circle == true) && (self.squaresList[5].circle == true) && (self.squaresList[8].circle == true) ) {
+						self.win = ('true');
+						self.winningLine = "win6";
+						
+					}
+
+				// diagonal wins
+
+				else if ( (self.squaresList[2].circle == true) && (self.squaresList[4].circle == true) && (self.squaresList[6].circle == true) ) {
+					self.win = ('true');
+					self.winningLine = "win7";
+					
+				}
+
+				else if ( (self.squaresList[0].circle == true) && (self.squaresList[4].circle == true) && (self.squaresList[8].circle == true) ) {
+					self.win = ('true');
+					self.winningLine = "win8";
+					
+				}
 
 				// var a = 0;
 

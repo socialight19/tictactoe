@@ -13,22 +13,39 @@
 <body ng-app="dataBindingApp">
 <div ng-controller="MainController as ctrl">
    <!--changed controller alias to 'ctrl' avoid confusion.-->
-
+<section id="overall">
    <section class="main">
-       <div id="gameboard">
-       	<div id="winnerletters" ng-show="ctrl.win">Winner!</div>
-       	<div ng-class="ctrl.winningLine"></div>
- 
-           <div class="square" ng-repeat="square in ctrl.squaresList">
-           		<div ng-class="{circle: square.circle, ex: square.x}" ng-click="ctrl.setPiece($index)">
-           		</div>
+     <div id="winsleft">
+        <div class="player">Player 1</div>
+        <div id="player1board">
+          <img src="images/littlex.png">
+          <img src="images/littlex.png">  
+          <img src="images/littlex.png">
+        </div>
+     </div>
+         <div id="gameboard">
+             	  <div id="winnerletters" ng-show="ctrl.win">Winner!</div>
+               	<div id="centertable">
+                    <div ng-show="ctrl.win">
+                      <img ng-src="images/win1.png" ng-class="ctrl.winningLine">
+                    </div>
+           
+                     <div class="square" ng-repeat="square in ctrl.squaresList">
+                     		<div ng-class="{circle: square.circle, ex: square.x}" ng-click="ctrl.setPiece($index)"></div>
+                     </div>
+                </div>
+         </div>
+      <div id="winsright">
+        <div class="player">Player 2</div>
+        <div id="player2board">
+         <div ng-show="ctrl.wins[0].circle"><img src="images/littlecircle.png"><div>
+          <div ng-show="ctrl.wins[1].circle"><img src="images/littlecircle.png"><div>
+           <div ng-show="ctrl.wins[2].circle"><img src="images/littlecircle.png"><div>
+        </div>
+      </div>
 
-<!--            		ng-click="toggle = !toggle" ng-class="{'red' : toggle}"
- -->           		
-           </div>
-       </div>
-  
    </section>
+</section>
 
 </div>
 
