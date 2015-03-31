@@ -11,24 +11,27 @@
    <script type="text/javascript" src="js/controller.js"></script>
 </head>
 <body ng-app="dataBindingApp">
-<!-- I'm adding some comments
- -->
+
 <div ng-controller="MainController as ctrl">
    <!--changed controller alias to 'ctrl' avoid confusion.-->
 <section id="overall">
+
+  <div id="playagain" ng-show="ctrl.showWinButton"><button ng-click="ctrl.clearTheBoardButton($index)">Play Again</button></div>
+
+
    <section class="main">
      <div id="winsleft">
         <div class="player">Player 1</div>
         <div id="player1board">
-          <img src="images/littlex.png">
-          <img src="images/littlex.png">  
-          <img src="images/littlex.png">
+          <div class="xscore" ng-show="ctrl.wins[0].x"><img src="images/littlex.png"></div>
+          <div class="xscore" ng-show="ctrl.wins[1].x"><img src="images/littlex.png"></div>
+          <div class="xscore" ng-show="ctrl.wins[2].x"><img src="images/littlex.png"></div>
         </div>
      </div>
          <div id="gameboard">
-             	  <div id="winnerletters" ng-show="ctrl.win">Winner!</div>
+             	  <div id="winnerletters" ng-show="ctrl.win">{{ctrl.winStatement}}</div>
                	<div id="centertable">
-                    <div ng-show="ctrl.win">
+                    <div ng-show="ctrl.showWinLine">
                       <img ng-src="images/win1.png" ng-class="ctrl.winningLine">
                     </div>
            
@@ -38,13 +41,20 @@
                 </div>
          </div>
       <div id="winsright">
+
         <div class="player">Player 2</div>
         <div id="player2board">
-         <div ng-show="ctrl.wins[0].circle"><img src="images/littlecircle.png"><div>
-          <div ng-show="ctrl.wins[1].circle"><img src="images/littlecircle.png"><div>
-           <div ng-show="ctrl.wins[2].circle"><img src="images/littlecircle.png"><div>
+            <div class="circlesscore" ng-show="ctrl.wins[0].circle"><img src="images/littlecircle.png"><div>
+            <div class="circlesscore" ng-show="ctrl.wins[1].circle"><img src="images/littlecircle.png"><div>
+            <div class="circlesscore" ng-show="ctrl.wins[2].circle"><img src="images/littlecircle.png"><div>
         </div>
+
+
+
+
+           
       </div>
+
 
    </section>
 </section>
